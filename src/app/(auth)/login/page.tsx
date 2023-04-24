@@ -13,8 +13,8 @@ const Page: FC = () => {
     try {
       await signIn('google')
     } catch (error) {
-      toast.error('Something went wrong with your login.')
       // display error message to user
+      toast.error('Something went wrong with your login.')
     } finally {
       setIsLoading(false)
     }
