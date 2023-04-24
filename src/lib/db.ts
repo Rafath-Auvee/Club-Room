@@ -7,7 +7,11 @@
 
 import { Redis, Requester } from '@upstash/redis'
 
-const requester: Requester = {
+interface CustomRequester extends Requester {
+  url?: string
+}
+
+const requester: CustomRequester = {
   url: process.env.UPSTASH_REDIS_REST_URL,
   token: process.env.UPSTASH_REDIS_REST_TOKEN,
 }
