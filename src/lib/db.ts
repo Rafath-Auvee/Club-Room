@@ -9,6 +9,7 @@ import { Redis, Requester } from '@upstash/redis'
 
 interface CustomRequester extends Requester {
   url?: string
+  token?: string
 }
 
 const requester: CustomRequester = {
